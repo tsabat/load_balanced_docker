@@ -5,4 +5,4 @@ RUN mkdir -p /root/a && \
     touch /root/a/a && \
     touch /root/b/b
 
-CMD cd /root/$POOL && python3 -m http.server $PORT
+CMD cd /root/$POOL && python3 -m http.server 80
