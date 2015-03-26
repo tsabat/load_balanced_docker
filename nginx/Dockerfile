@@ -8,5 +8,6 @@ RUN apt-get update && \
 RUN touch /var/log/nginx/error.log
 
 ADD nginx.conf /etc/nginx/sites-enabled/default
+ADD startup.sh /startup.sh
 
-CMD service nginx start && tail -f /var/log/nginx/error.log
+CMD /startup.sh
